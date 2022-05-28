@@ -39,10 +39,7 @@ def main():
         "0": "5",
     }
     args = get_args()
-    new_text = ""
-    for char in args.text:
-        new_text += jumper.get(char, char)
-    print(new_text)
+    print("".join([jumper.get(char, char) for char in args.text]))
 
 
 # --------------------------------------------------
